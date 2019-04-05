@@ -28,4 +28,12 @@ Tabell 2:
 | id | *userid* | message |
 | -- | -------- | ------- |
 
+### Pass #2:
+Det är lite svårt att skapa klassdiagram och färdiga systembeskrivningar innan man är bekväm med det man håller på med.
+Jag tänker dock idag att jag kommer skapa CRUD i Databaseklassen. De funktionerna kan jag senare använda i Client-klassen.
+
+Idag har jag också skapat en klass som heter Secret, där jag har alla känsliga data.
+
+Det har gått sådär idag, förstår mig inte riktigt på allt och har errors i min kod. Nästa lektion ska jag försöka på CRUD att fungera helt.
+
 
