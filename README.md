@@ -36,4 +36,8 @@ Idag har jag också skapat en klass som heter Secret, där jag har alla känslig
 
 Det har gått sådär idag, förstår mig inte riktigt på allt och har errors i min kod. Nästa lektion ska jag försöka på CRUD att fungera helt.
 
+### Pass #3:
+Idag försöker jag få classen db att fungera, går sådär. Anslutningen till databasen fungerar inte just nu.
+Nästa pass ska jag försöka få igång db-klassen så att den kan göra CRUD.
+
 

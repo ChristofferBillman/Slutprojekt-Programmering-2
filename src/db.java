@@ -7,11 +7,19 @@ import java.sql.SQLException;
 
 public class db {
 
-    // Setup
     public static final String DEFAULT_DRIVER_CLASS = "com.mysql.jdbc.Driver";
     public static final String DEFAULT_URL = "jdbc:mysql://"+ Secret.hostname +":"+Secret.port+"/"+Secret.dbName;
 
-    Connection connection;
+    static Connection connection;
+
+    public db() {
+        try {
+            Class.forName(DEFAULT_DRIVER_CLASS);
+            connection = DriverManager.getConnection(DEFAULT_URL, Secret.DEFAULT_USERNAME, Secret.DEFAULT_PASSWORD);
+        } catch(Exception e ) {
+            System.out.println(e);
+        }
+    }
 
     // Create method.
     public void create() {
@@ -34,7 +42,7 @@ public class db {
 
     // Read method.
     public User read(String attrbt, String table) {
-
+        User user = null;
         try {
             PreparedStatement ps = null;
             ResultSet rs = null;
@@ -42,18 +50,18 @@ public class db {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                User user = new User(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
-                return user;
+                user = new User(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
             }
 
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
+        return user;
     }
 
     // Update method.
     public User update(String attrbt, String table) {
-
+        User user = null;
         try {
             PreparedStatement ps = null;
             ResultSet rs = null;
@@ -61,13 +69,13 @@ public class db {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                User user = new User(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
-                return user;
+                user = new User(rs.getInt("id"), rs.getString("username"), rs.getString("password"));
             }
 
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }
+        return user;
     }
 
     // Delete method.
@@ -88,6 +96,4 @@ public class db {
         }
     }
 
-    db() {
-    }
 }
