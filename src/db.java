@@ -1,16 +1,11 @@
 import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 public class db {
 
     public static final String DEFAULT_DRIVER_CLASS = "com.mysql.jdbc.Driver";
-    public static final String DEFAULT_URL = "jdbc:mysql://"+ Secret.hostname +":"+Secret.port+"/"+Secret.dbName;
+    public static final String DEFAULT_URL = "jdbc:mysql://"+ Secret.hostname +":" + Secret.port + "/" + Secret.dbName;
 
-    static Connection connection;
+    private static Connection connection;
 
     public db() {
         try {
@@ -22,19 +17,14 @@ public class db {
     }
 
     // Create method.
-    public void create() {
+    public void insert(String values, String columns, String table) {
         try {
             PreparedStatement ps = null;
             ResultSet rs = null;
-            ps = connection.prepareStatement(""); // Insert create statement
-            rs = ps.executeQuery();
+            ps = connection.prepareStatement("INSERT INTO " + table + " (" + columns + ") " + "VALUES (" + values + ")"); // Insert create statement
+            ps.executeUpdate();
 
-            while (rs.next()) {
-                String firstName = rs.getString("Fname");
-                String address = rs.getString("Address");
-                System.out.println(firstName + " , " + address);
-            }
-
+            System.out.println("Sucessfully inserted values" + values + "into columns" + columns + "in table" + table);
         } catch (SQLException e) {
             System.err.println(e.getMessage());
         }

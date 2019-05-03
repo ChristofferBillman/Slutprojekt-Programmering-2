@@ -40,4 +40,6 @@ Det har gått sådär idag, förstår mig inte riktigt på allt och har errors i
 Idag försöker jag få classen db att fungera, går sådär. Anslutningen till databasen fungerar inte just nu.
 Nästa pass ska jag försöka få igång db-klassen så att den kan göra CRUD.
 
+### Pass #4:
+
 
