@@ -37,9 +37,16 @@ Idag har jag också skapat en klass som heter Secret, där jag har alla känslig
 Det har gått sådär idag, förstår mig inte riktigt på allt och har errors i min kod. Nästa lektion ska jag försöka på CRUD att fungera helt.
 
 ### Pass #3:
-Idag försöker jag få classen db att fungera, går sådär. Anslutningen till databasen fungerar inte just nu.
-Nästa pass ska jag försöka få igång db-klassen så att den kan göra CRUD.
+Idag försöker jag få classen Db att fungera, går sådär. Anslutningen till databasen fungerar inte just nu.
+Nästa pass ska jag försöka få igång Db-klassen så att den kan göra CRUD.
 
 ### Pass #4:
 
+### Pass #5:
+Idag ska jag åtrigen försöka få igång Db. Det fungerar att sätta in värden.
+
+### Pass #6:
+Det går sådär, nu förstår jag mig på allt som används för databashanteringen. Idag har jag försökt att fixa server och göra så att db.read() fungerar.
+Det gick sådär, så nästa pass så är målet att parsa Message-objekt till text och sedan skicka dem till servern från klienten vice versa. Jag tänker också att
+det hade varit bra om crud är helt färdigt nästa pass.
 

@@ -3,6 +3,13 @@ public class User {
     public String username;
     public String password;
 
+    /**
+     *
+     * @param id  User id.
+     * @param username usernmae of user.
+     * @param password password of user.
+     */
+
     User(int id, String username, String password) {
         this.id = id;
         this.username = username;
